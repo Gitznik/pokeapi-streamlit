@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pokeapi"
+version = "0.1.0"
+description = ""
+authors = ["Robert Offner <roffner@it4ipm.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.25.0"
+pandas = "^2.0.3"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.280"
+pyright = "^1.1.318"
+pre-commit = "^3.3.3"
+pytest = "^7.4.0"
+watchdog = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
