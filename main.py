@@ -27,7 +27,7 @@ def map_name_or_id(choice: str, options: list[str]) -> str | int | None:
 
 
 if endpoint:
-    res_resources = conn.list_available_resources(endpoint)
+    res_resources = conn.list_available_resources(endpoint, limit=1000)
     st.write("These are the available resources in this endpoint:")
     st.dataframe(res_resources, hide_index=True)
     st.divider()
