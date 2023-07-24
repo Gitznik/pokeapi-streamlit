@@ -40,7 +40,7 @@ if endpoint:
     if id_or_name:
         selection = map_name_or_id(id_or_name, res_resources.name.tolist())
         if selection:
-            res_resource = conn.query(endpoint, selection)
+            res_resource = conn.get_resource(endpoint, selection)
             st.json(res_resource, expanded=False)
         else:
             st.write("Please select a name or ID to explore")
