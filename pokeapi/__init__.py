@@ -35,6 +35,9 @@ class PokeApiConnection(ExperimentalBaseConnection[requests.Session]):
         _ = kwargs
         return requests.session()
 
+    def session(self) -> requests.Session:
+        return _instance
+
     def list_available_endpoints(
         self, ttl: ttl_duration = 3600, **kwargs
     ) -> pd.DataFrame:
